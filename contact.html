@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>تواصل معنا</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="menu">
+            <a href="index.html" >بابلو بيكاسو</a>
+            <a href="second_page.html" >معرض أعمال بابلو بيكاسو</a>
+            <a href="third_page.html" >فينسنت فان غوخ</a>
+            <a href="fourth_page.html" >معرض أعمال فينسنت فان غوخ</a>
+            <a href="contact.html" class="active">تواصل معنا</a>
+            <a href="About-us.html">من نحن</a>
+            <a  class="right" onclick="mode()">Mode</a>
+        </div>
+        
+        <p>&nbsp;</p>
+        <h1 style="text-align:center"><span style="color:#3498db"><u><strong>تواصل معنا</strong></u></span></h1>
+        <form id="home_fname">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
+            <label for="Age">Age:</label><br>
+            <input type="number" id="Age" name="lname" value=""><br><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="number" id="phone" name="lname" value=""><br><br>
+            <input class="lbutton" onclick="get()" type="button" value="Submit">
+        </form>
+        
+        <p>&nbsp;</p>
+        <table id="home_table" style="margin-top: 0px; border: 1px solid;">
+            <tr style=" border: 1px solid;">
+                <th style=" border: 1px solid;">Your name </th>
+                <th style=" border: 1px solid;" id="allname"></th>
+            </tr>
+            <tr style=" border: 1px solid;">
+                <th style=" border: 1px solid;">Your Age</th>
+                <th id="yage"></th>
+            </tr>
+            <tr style=" border: 1px solid;">
+                <th style=" border: 1px solid;">Your Phone number</th>
+                <th id="Phone_number"></th>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+        <div class="footer" id="foot">
+            <h2>Home page Footer</h2>
+        </div>
+
+        <script>
+            function  get()
+        {
+            document.getElementById("allname").innerHTML = document.getElementById('fname').value + " "+
+            document.getElementById('lname').value;
+            document.getElementById("yage").innerHTML = document.getElementById('Age').value ;
+            document.getElementById("Phone_number").innerHTML = document.getElementById('phone').value ;
+        }
+        
+            var t = 0;
+            function mode() {
+                if (t == 0) {
+                    document.body.style.backgroundColor = "#3e3e3e";
+                    document.getElementById("foot").style.backgroundColor = "#3e3e3e";
+                    t = 1;
+                }else {
+                    document.body.style.backgroundColor = "white";
+                    document.getElementById("foot").style.backgroundColor = "white";
+                    t = 0;
+                }
+            }
+        
+        </script>
+    </body>
+</html>
